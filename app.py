@@ -24,6 +24,7 @@ def base_static(filename):
 def hello_world():
     return 'Hello from Flask!'
 
+
 @app.route('/load', methods=['GET', 'POST'])
 def loader():
     form = ImageLinkForm()
