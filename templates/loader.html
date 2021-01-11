@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<form action="" method="post">
+<div class="input text">
+{{ form.link.label }} {{ form.link }}
+</div>
+
+<div class="input submit">
+<input type="submit" value="Submit">
+</div>
+
+
+</form>
+
+
+
+<style>
+
+img {
+    width: 50%;
+    height: auto;
+    }
+
+
+</style>
+
+
+{% if filename %}
+
+
+
+
+<img src="cache/{{ filename }}"}}>
+
+
+
+{% endif %}
+
+
+
+
+
+{% endblock %}
