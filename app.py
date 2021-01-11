@@ -30,16 +30,6 @@ def this():
     return 'This'
 
 
-@app.route('/imgur/<link>')
-def display_image(link):
-    image_link = 'https://i.imgur.com/' + link
-    r = requests.get(image_link, stream=True)
-    r.raw.decode_content = True
-    with open('cache/' + link, 'wb') as f:
-        shutil.copyfileobj(r.raw, f)
-    folder = "cache/" + link
-    return send_file(folder, mimetype='image/gif')
-
 
 @app.route('/load', methods=['GET', 'POST'])
 def loader():
